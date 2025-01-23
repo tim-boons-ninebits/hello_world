@@ -9,4 +9,6 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v3
       - name: Hello World
-        run: echo "hello World"
+        run: |
+          echo "${{ vars.WEBSITE }}"
+          echo "${{ secrets.API_KEY }}"
